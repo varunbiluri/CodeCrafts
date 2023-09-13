@@ -1,0 +1,74 @@
+.sign_up_banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 700px;
+    padding: 10% 10% 0% 10%;
+}
+.sign_up_form{
+    padding-left: 10%;
+}
+.sign_up_image{
+    width: 500px;
+    height: 500px;
+}
+h1{
+    color: #000;
+    font-family: Orelega One;
+    font-size: 55px;
+}
+p{
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+}
+
+input{
+    width: 480px;
+    height: 50px;
+    flex-shrink: 0; 
+    border-radius: 20px 0px;
+    background: rgba(0, 0, 0, 0.10);
+    color: rgba(255, 255, 255, 0.50);
+    font-family: Marko One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 10px;
+}
+.button{
+    border-radius: 30px 0px;
+    border: 1px solid #000;
+    background: #5386B4;
+    width: 341px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Marko One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.sign_up_submit{
+    padding-top: 10px;
+    padding-left: 10%;
+}
+.google{
+    padding-left: 10px;
+    width: 60px;
+    height: 20px;
+    flex-shrink: 0;
+}
+.github{
+    width: 60px;
+    height: 20px;
+    flex-shrink: 0;
+    padding-left: 10px;
+}
+.facebook{
+    width: 60px;
+    height: 20px;
+    flex-shrink: 0;
+    padding-left: 10px;
+}

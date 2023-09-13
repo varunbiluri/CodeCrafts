@@ -1,0 +1,50 @@
+.banner{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 500px;
+    padding: 10% 10% 0% 10%;
+}
+p{
+    color: #000;
+    padding-left: 10%;
+}
+h1{
+    color: #000;
+    padding-left: 10%;
+
+}
+.banner-text1{
+    font-family: Rowdies;
+    font-size: 60px;
+}
+.banner-text2{
+    font-style: solid;
+    font-family: Rowdies;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.banner-button-div{
+    width: 240px;
+    height: 70px;
+    flex-shrink: 0;
+    padding-left:10%;
+}
+.banner-button{
+    border-radius: 40px;
+    background: #FFF;
+}
+span{
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.Banner-image{
+    width: 500px;
+    height: 500px;
+    padding-right: 10%;
+}

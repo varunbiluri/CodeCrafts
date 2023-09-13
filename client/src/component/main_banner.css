@@ -1,0 +1,37 @@
+.main_banner{
+    padding-top: 10%;
+}
+.main_banner_box{
+    width: 1080px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #000000;
+    margin-left: 20%;
+}
+.main_banner_box_text{
+    color: #000000;
+    font-family: Inter;
+    padding-left: 1%;
+}
+.main_banner_box_desc{
+    color: #000000;
+    font-family: Istok Web;
+    padding-left: 1%;
+}
+.main_banner_box_solve{
+    
+    width: 200px;
+    height: 65px;
+    color: #000;
+    text-align: center;
+    font-family: Lalezar;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.main_banner_box_button{
+    padding-top: 2%;
+    padding-left: 50%;
+}

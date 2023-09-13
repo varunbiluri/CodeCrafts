@@ -1,0 +1,31 @@
+.editor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 1000px;
+    padding-top:120px;
+}
+
+#button{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 80%;
+}
+#h1{
+    color: #000000;
+    font-family: Inter;
+    font-size: 30px;
+}
+#p{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+}
+.results{
+    border: 2px solid #3e403f;
+    width: 90%;
+    padding-left: 5%;
+}

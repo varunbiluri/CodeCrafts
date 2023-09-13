@@ -1,0 +1,25 @@
+.features
+{
+    padding:10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 500px;
+    
+}
+p{
+    color: #0C3461;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+.features1-image{
+    padding: 10% 30%;
+}
+.features2-image{
+    padding: 10% 30%;
+
+}
