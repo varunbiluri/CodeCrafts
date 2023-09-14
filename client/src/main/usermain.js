@@ -10,6 +10,7 @@ import ReqAuth from '../component/req_auth';
 import LoginSuccessful from '../component/login_success'; 
 import SignupSuccessful from '../component/signup_success'; 
 import Profile from '../component/profile';
+import { ProblemProvider } from "../component/ProblemContent";
 
 function Usermain() {
     return (
@@ -19,8 +20,16 @@ function Usermain() {
             <Route path='/' element={<Home />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/login' element={<LogIn />} />
-            <Route path='/main' element={<ReqAuth><Main /></ReqAuth>} />
-            <Route path='/editor' element={<ReqAuth><MonacoEditorComponent /></ReqAuth>} />
+            <Route path='/main' element={<ReqAuth>
+              <ProblemProvider>
+              <Main />  
+              </ProblemProvider>
+            </ReqAuth>} />
+            <Route path='/editor' element={<ReqAuth>
+              <ProblemProvider>
+              <MonacoEditorComponent />
+              </ProblemProvider>
+              </ReqAuth>} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/login_successfull' element={<LoginSuccessful />} />
             <Route path='/signup_successfull' element={<SignupSuccessful />} />

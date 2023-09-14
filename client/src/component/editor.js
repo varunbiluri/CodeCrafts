@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import MonacoEditor from 'react-monaco-editor';
 import Navbar from './navbar';
 import './editor.css';
-import axios from 'axios';
-import { useParams } from 'react-router-dom'; // Import useParams to access route parameters
+import axios from 'axios'; // Import Axios
+import { useProblem } from './ProblemContent';
 
 function MonacoEditorComponent() {
   const fontSize = '25px';
@@ -11,43 +11,39 @@ function MonacoEditorComponent() {
     fontSize: fontSize,
   };
 
-  const [problem, setProblem] = useState({
-    problem: '',
-    problemDescription: '',
-    input: '',
-    output: '',
-  });
-
-  const { problemId } = useParams();
+  const { selectedProblem } = useProblem();
+  const [code, setCode] = useState(''); // State to store code
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/codes/see/${problemId}`)
-      .then((res) => {
-        const { problem, problemDescription, input, output } = res.data;
-        setProblem({
-          problem,
-          problemDescription,
-          input,
-          output,
-        });
+    console.log(selectedProblem);
+  }, [selectedProblem]);
+
+  // Function to send code to the server
+  const submitCode = () => {
+    // Send the code to your server for saving
+    axios.post('http://localhost:3000/editor/add', { code })
+      .then((response) => {
+        console.log('Code saved successfully:', response);
+        // You can handle success actions here
       })
-      .catch((err) => {
-        console.error(err);
+      .catch((error) => {
+        console.error('Error saving code:', error);
+        // Handle error scenarios here
       });
-  }, [problemId]); 
+  };
 
   return (
     <div>
       <Navbar />
       <div className="editor">
         <div className='editor-problem'>
-          <h1 id="h1">{problem.problem}</h1>
-          <p id="p">{problem.problemDescription}</p>
+          <h1 id="h1">{selectedProblem?.problem}</h1>
+          <p id="p">{selectedProblem?.problemDescription}</p>
      
           <h1 id="h1"> Input: </h1>
-          <p id="p">{problem.input}</p>
+          <p id="p">{selectedProblem?.input}</p>
           <h1 id="h1"> Output: </h1>
-          <p id="p">{problem.output}</p>
+          <p id="p">{selectedProblem?.output}</p>
         </div>
         <div className="editor_ide">
           <MonacoEditor
@@ -55,11 +51,12 @@ function MonacoEditorComponent() {
             height="600"
             language="javascript"
             theme="vs-dark"
-            value="Start Coding Here"
+            value={code} // Bind the code to the editor
             options={options}
+            onChange={(newCode) => setCode(newCode)} // Update code state on change
           />
           <br />
-          <button id="button" type="submit">Submit Code</button>
+          <button id="button" type="button" onClick={submitCode}>Submit Code</button>
           <br />
           <br />
           <div className='results'>

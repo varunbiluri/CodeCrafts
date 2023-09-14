@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './addcode.css'
 class Addcode extends Component {
     constructor(props) {
         super(props);
