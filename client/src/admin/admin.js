@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './admin.css';
 import axios from 'axios';
 import Addcode from './addcode';
 export class Admin extends Component {
