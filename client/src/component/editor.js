@@ -23,7 +23,7 @@ function MonacoEditorComponent() {
     // Send the code to your server for saving
     axios.post('http://localhost:3000/editor/add', { code })
       .then((response) => {
-        console.log('Code saved successfully:', response);
+        console.log('Code saved successfully:', response.data);
         // You can handle success actions here
       })
       .catch((error) => {
@@ -74,3 +74,8 @@ function MonacoEditorComponent() {
 }
 
 export default MonacoEditorComponent;
+
+
+
+
+
