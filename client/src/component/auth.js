@@ -4,7 +4,6 @@ const AuthContext = React.createContext(null);
 
 const AuthProvider = (props) => {
   const [user, setUser] = useState(null);
-  const [Name, setName] = useState(null);
   const [userlist, setUserlist] = useState([]); 
 
   const login = (Name,username,password) => {
@@ -13,7 +12,8 @@ const AuthProvider = (props) => {
 
   useEffect(() => {
     axios.get('http://localhost:3000/users/userdet')
-    .then(res=>{setUserlist(res.data)})
+    .then(res=>{setUserlist(res.data)
+    })
     .catch(err=>{console.log(err)})
   })
   const signup = (Name, Email, Password) => {
@@ -24,7 +24,6 @@ const AuthProvider = (props) => {
     })
       .then(res => {
         console.log(res.data);
-        setName(Name);
       })
       .catch(err => {
         console.log(err);
@@ -38,7 +37,7 @@ const AuthProvider = (props) => {
   
   return (
     <AuthContext.Provider
-      value={{ user,Name, signup, userlist, login, logout }}>
+      value={{ user, signup, userlist, login, logout }}>
       {props.children}
     </AuthContext.Provider>
   );
