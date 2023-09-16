@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import MonacoEditor from 'react-monaco-editor';
 import Navbar from './navbar';
 import './editor.css';
 import axios from 'axios';
-
 import { useProblem } from './ProblemContent';
 
-
 function MonacoEditorComponent() {
-
   const fontSize = '15px';
   const options = {
     fontSize: fontSize,
@@ -94,13 +92,6 @@ const [yourOutput, setYourOutput] = useState('');
     setSelectedLanguage(event.target.value);
   };
 
-
-
-  const { selectedProblem } = useProblem();
-  useEffect(() => {
-    console.log(selectedProblem);
-  }, [selectedProblem]);
-
   return (
     <div>
       <Navbar />
@@ -115,7 +106,6 @@ const [yourOutput, setYourOutput] = useState('');
           <p id="p">{selectedProblem?.output}</p>
         </div>
         <div className="editor_ide">
-
           {/* Dropdown for selecting the programming language */}
           <div className="language-select">
             <label htmlFor="language">Select a language:</label>
@@ -153,7 +143,7 @@ const [yourOutput, setYourOutput] = useState('');
           <p>{expectedOutput}</p>
           <h2>Output</h2>
           <p>{yourOutput}</p>
-          </div>          
+          </div>
 
         </div>
       </div>
