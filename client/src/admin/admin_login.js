@@ -37,7 +37,7 @@ const Admin_login = () => {
   };
 
   return (
-    <div className='log_in_admin'>
+    <div className='log_in_admin'> 
     
       <div className='log_in_content'>
         <div className='log_in_title'>
