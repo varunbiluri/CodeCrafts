@@ -5,6 +5,7 @@ var Editor = require('../Model/editor.model');
 router.post('/add', function(req, res) {
   const newEditor = new Editor({
     usercode: req.body.usercode,
+    language: req.body.language,
   });
   newEditor.save()
   .then(response => {
@@ -28,6 +29,7 @@ router.get('/see', function(req, res) {
 router.put('/update/:id', function(req, res) {
   Editor.findByIdAndUpdate(req.params.id, {
     usercode: req.body.usercode,
+    language: req.body.language,
   })
   .then(res => {
     res.send(res);
