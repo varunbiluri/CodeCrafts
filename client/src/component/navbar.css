@@ -10,7 +10,7 @@
     position: fixed;
     background: rgba(255, 255, 255, 0.10);
 }
-nav{
+.nav{
     display: flex;
     justify-content: end;
     position: relative;
@@ -18,10 +18,7 @@ nav{
     column-gap: 10%;
     padding: 0 10%;
 }
-a{
-    text-decoration: none;
-    color: #000;
-}
+
 .but{
     background-color: #000000;
     color: #fff;

@@ -45,15 +45,16 @@ const LogInBanner = () => {
             </div>
             <div className='log_in_content'>
                 <div className='log_in_title'>
-                    <h1>Start your coding journey today</h1>
+                    <h1>Let’s Make your coding journey today</h1>
                 </div>
                 <div className='log_in_decs'>
-                    <p>Learn to code from scratch</p>
+                    <p>make code from scratch</p>
                     </div>
                 <div className='log_in_form'>
                     <form onSubmit={submit}>
-                    <input type="text" placeholder='Enter your Username' value={user} onChange={changeuser} required/>
-                    <input type="password" placeholder='Enter your password'  value={password} onChange={changepassword} required/>
+                    
+                    <input className="login_input" type="text" placeholder='Enter your Username' value={user} onChange={changeuser} required/>
+                    <input className="login_input" type="password" placeholder='Enter your password'  value={password} onChange={changepassword} required/>
                     <div className="log_in_submit">
                     <button type="submit" className="button"> Start Coding today </button>
                     {!userlist ? <h3 id="invalid">Invalid username or password</h3>:''}
@@ -61,7 +62,7 @@ const LogInBanner = () => {
                 </div></form>
                 </div>
                 <div className="log_in_login">
-                    <p>Don't have an account?  <Link to='/signup'>Sign up</Link></p>
+                    <p>Don't have an account?  <Link to='/signup' className="link">Sign up</Link></p>
                 </div>
             </div>
         </div>

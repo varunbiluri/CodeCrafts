@@ -4,25 +4,13 @@
     height: 500px;
     padding: 10% 10% 0% 10%;
 }
-p{
+.banner-text{
     color: #000;
-    padding-left: 10%;
-}
-h1{
-    color: #000;
-    padding-left: 10%;
-
-}
-.banner-text1{
     font-family: Rowdies;
-    font-size: 60px;
-}
-.banner-text2{
-    font-style: solid;
-    font-family: Rowdies;
-    font-size: 40px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    line-height: normal;
 }
 
 .banner-button-div{
@@ -35,7 +23,7 @@ h1{
     border-radius: 40px;
     background: #FFF;
 }
-span{
+.span{
     color: #000;
     font-family: Inter;
     font-size: 32px;
