@@ -7,9 +7,9 @@ function Features() {
     return (
       <div className='features'>
         <div className='features1'>
-        <div className='features1-text'>
-            <h1 className='features1-text1'>Most Popular Coding Question</h1> 
-            <p className='features1-text2'>Contain most popular coding questions 
+        <div className='features-text'>
+            <h1 className='features-text1'>Most Popular Coding Question</h1> 
+            <p className='features-text2'>Contain most popular coding questions 
             asked in many interviews and help to crack the coding interviews easily...!</p>
             </div>
             <div className='features1-image'>
@@ -21,8 +21,8 @@ function Features() {
                 <img src={most} alt="most" />
             </div>
             <div className='features-text'>
-            <h1 className='features2-text1'>In Browser IDE</h1>
-            <p className='features2-text2'>Practice as you learn with our built-in IDE.
+            <h1 className='features-text1'>In Browser IDE</h1>
+            <p className='features-text2'>Practice as you learn with our built-in IDE.
              Each lesson is designed to be followed by a coding exercise to apply the concepts and gain immediate</p>
             </div>
     </div>
