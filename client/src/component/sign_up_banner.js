@@ -43,10 +43,11 @@ const SignUpBanner = () => {
             <div className="sign_up_content">
                 <div className="sign_up_title">
                     <h1>Start your coding journey today</h1>
-                </div>
-                <div className="sign_up_decs">
+                     <div className="sign_up_decs">
                     <p>Learn to code from scratch</p>
                 </div>
+                </div>
+               
                 <div className="sign_up_form">
                     <form onSubmit={sign_submit}>
                     <input
@@ -55,6 +56,7 @@ const SignUpBanner = () => {
                             value={Name}
                             onChange={changename}
                             required
+                            className="signup_input"
                         />
                         <input
                             type="text"
@@ -62,6 +64,7 @@ const SignUpBanner = () => {
                             value={user}
                             onChange={changeuser}
                             required
+                            className="signup_input"
                         />
                         <input
                             type="password"
@@ -69,6 +72,7 @@ const SignUpBanner = () => {
                             value={password}
                             onChange={changepassword}
                             required
+                            className="signup_input"
                         />
                         <div className="sign_up_submit">
                             <button type="submit" className="button">
@@ -80,7 +84,7 @@ const SignUpBanner = () => {
                 </div>
                 <div className="sign_up_login">
                     <p>
-                        Already have an account? <Link to="/login">Log In</Link>
+                        Already have an account? <Link to="/login" className="link">Log In</Link>
                     </p>
                 </div>
             </div>

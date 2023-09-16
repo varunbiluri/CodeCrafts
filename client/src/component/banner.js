@@ -12,9 +12,11 @@ function Banner() {
     <div className='banner'>
       <div className='banner-text'>
         <h1 className='banner-text1'>Level Up Your Coding:</h1>
+        <div className='banner-text2'>
         <Text />
+        </div>
         <div className='banner-button-div'>
-         <Link to="./signup"><button className='banner-button'><span>Get Started</span></button></Link>
+         <Link to="./signup"><button className='banner-button'><span className='span'>Get Started</span></button></Link>
         </div>
       </div>
       <div className='Banner-image'>

@@ -9,18 +9,33 @@
     width: 500px;
     height: 500px;
 }
-h1{
+.log_in_title{
     color: #000;
     font-family: Orelega One;
-    font-size: 55px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-p{
+.log_in_decs{
     color: #000;
-    font-family: Inter;
-    font-size: 32px;
+    font-family: Lora;
+    font-size: 40px;
+    font-style: oblique;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 30%;
+}
+.log_in_login{
+    color: #000;
+    font-family: Merge One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-input{
+.login_input{
     width: 480px;
     height: 50px;
     flex-shrink: 0; 
@@ -57,23 +72,14 @@ input{
     padding-top: 10px;
     padding-left: 10%;
 }
-.google{
-    padding-left: 10px;
-    width: 60px;
-    height: 20px;
-    flex-shrink: 0;
-}
-.github{
-    width: 60px;
-    height: 20px;
-    flex-shrink: 0;
-    padding-left: 10px;
-}
-.facebook{
-    width: 60px;
-    height: 20px;
-    flex-shrink: 0;
-    padding-left: 10px;
+.log_in_login{
+    color: #000;
+    font-family: Merge One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 20%;
 }
 #invalid{
     color: red;
