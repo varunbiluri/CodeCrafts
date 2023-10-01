@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Admin_navbar from "./admin_navbar";
+import { Link } from 'react-router-dom';
 class Addcode extends Component {
     constructor(props) {
         super(props);
@@ -39,6 +41,7 @@ class Addcode extends Component {
         const { problem,problemDescription,input,output } = this.state;
         return (
             <div className="container"> 
+            <Admin_navbar/>
             <h2>Add the Coding problem</h2>
             <br />
                 <label className="label-problem">Problem</label>
@@ -54,6 +57,10 @@ class Addcode extends Component {
                 <input type="text" name="output" value={output} onChange={(e) => this.setState({ output: e.target.value })}/>
                 <br />
                 <button onClick={this.addtodobd}>Add Coding Problem</button>
+
+                <div className='log_in_admin_add_button'>
+        <Link to='/admin/' className="admin_add_link"><button>See Problems</button></Link>
+      </div>
             </div>
         );
     }

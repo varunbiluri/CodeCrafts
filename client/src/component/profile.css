@@ -1,0 +1,11 @@
+.profile_head{
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+}
+.profile_span{
+    text-transform: uppercase;
+    padding-left: 1%;
+}

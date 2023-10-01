@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Addcode from './addcode';
+import Admin_navbar from "./admin_navbar";
+import './admin.css'
+import { Link } from 'react-router-dom';
 export class Admin extends Component {
   constructor(props) {
     super(props);
@@ -113,30 +115,34 @@ export class Admin extends Component {
   render() {
     const { list, popupbool, problem,problemDescription,input,output } = this.state;
     return (
-      <div className="container1">
-        <Addcode />
+      <div className="problems_container">
+        <Admin_navbar />
         <br />
-        <table>
-          <thead>
-            <tr>
-              <th>Problem</th>
-              <th>problem Description</th>
-              <th>Input</th>
-              <th>Output</th>
-              <th>Action</th>
+        <div className='log_in_admin_add_button'>
+        <Link to='/admin/addcode' className="admin_add_link"><button>Addcode</button></Link>
+      </div>
+      <br />
+        <table className='problems_table'>
+          <thead className='problems_thead'>
+            <tr className='problems_tr'>
+              <th className='problems_th'>Problem</th>
+              <th className='problems_th'>Problem Description</th>
+              <th className='problems_th'>Input</th>
+              <th className='problems_th'>Output</th>
+              <th className='problems_th'>Action</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className='problems_tbody'>
             {list.map((item, index) => {
               return (
-                <tr key={index}>
-                  <td>{item.problem}</td>
-                  <td>{item.problemDescription}</td>
-                  <td>{item.input}</td>
-                  <td>{item.output}</td>
-                  <td>
-                    <button onClick={() => this.deleteCode(item._id)}>Delete</button>
-                    <button onClick={() => this.showPopup(item._id, item.problem, item.problemDescription, item.input, item.output)}>Update</button>
+                <tr key={index} className='problems_btr'>
+                  <td className='problems_btd'>{item.problem}</td>
+                  <td className='problems_btd'>{item.problemDescription}</td>
+                  <td className='problems_btd'>{item.input}</td>
+                  <td className='problems_btd'>{item.output}</td>
+                  <td className='problems_action_buttons problems_btd'>
+                    <button onClick={() => this.deleteCode(item._id)} className='problems_buttons'>Delete</button> 
+                    <button onClick={() => this.showPopup(item._id, item.problem, item.problemDescription, item.input, item.output)} className='problems_buttons'>Update</button>
                   </td>
                 </tr>
               );
@@ -151,18 +157,18 @@ export class Admin extends Component {
                 <h2>Update Coding Problem Details</h2>
                 <br />
                 <label className="label-problem">Problem</label>
-                <input type="text" name="problem" value={problem} onChange={(e) => this.handleInputChange(e)} />
+                <input className='problems_input' type="text" name="problem" value={problem} onChange={(e) => this.handleInputChange(e)} />
                 <br />
                 <label className="label-problemDescription">problemDescription</label>
-                <input type="text" name="problemDescription" value={problemDescription} onChange={(e) => this.handleInputChange(e)} />
+                <input  className='problems_input' type="text" name="problemDescription" value={problemDescription} onChange={(e) => this.handleInputChange(e)} />
                 <br />
                 <label className="label-input">Input</label>
-                <input type="text" name="input" value={input} onChange={(e) => this.handleInputChange(e)} />
+                <input  className='problems_input' type="text" name="input" value={input} onChange={(e) => this.handleInputChange(e)} />
                 <br />
                 <label className="label-output">Output</label>
-                <input type="text" name="output" value={output} onChange={(e) => this.handleInputChange(e)} />
+                <input  className='problems_input' type="text" name="output" value={output} onChange={(e) => this.handleInputChange(e)} />
                 <br />
-                <button onClick={this.updateCode}>Update Code Problem</button>
+                <button onClick={this.updateCode} className='problems_update_button'>Update Code Problem</button>
               </div>
             </div>
           </div>

@@ -1,0 +1,47 @@
+.problems_container{
+    height: 100vh;
+}
+
+.problems_table{
+    background: #AABAF0;
+    margin: auto;
+    padding-top: 10px;
+    width: 90%;
+    border-collapse: collapse;
+}
+.problems_thead{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.problems_btd{
+    border: 2px solid rgba(0, 0, 0, 0.80);
+}
+.problems_th{
+    border: 2px solid rgba(0, 0, 0, 0.80);
+}
+.problems_btr{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.problems_buttons{
+    border-radius: 20px;
+    background: #68B7E6;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-left: 1%;
+}
