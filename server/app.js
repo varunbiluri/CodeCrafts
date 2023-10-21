@@ -16,7 +16,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-mongoose.connect('mongodb://127.0.0.1/code')
+mongoose.connect('mongodb+srv://skg1312:skg1312@demo.urixwbc.mongodb.net/?retryWrites=true&w=majority/code')
 .then(() => {
   console.log('Connected to database!');
 })
