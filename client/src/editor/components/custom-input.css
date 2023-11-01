@@ -1,0 +1,7 @@
+.custom-input{
+    height: 100%;
+    width: 99%;
+}
+textarea{
+    resize: none;
+}

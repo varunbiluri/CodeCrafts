@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./admin_auth";
-
+import './admin_signup.css';
+import Admin_navbar from "./admin_navbar";
 const Admin_signup = () => {
   const [Name, setName] = useState("");
   const [user, setUser] = useState("");
@@ -35,49 +36,62 @@ const Admin_signup = () => {
   };
 
   return (
-    <div className="sign_up">
-      
-      <div className="sign_up_content">
-        <div className="sign_up_title">
+    <div className="admin_sign_up">
+      <Admin_navbar />
+      <div className="admin_sign_up_content">
+        <div className="admin_sign_up_title">
           <h1>Admin's Signup</h1>
         </div>
-        <div className="sign_up_decs">
+        <div className="admin_sign_up_decs">
           <p>Here panel only for the Admin's</p>
         </div>
-        <div className="sign_up_form">
+        <div className="admin_sign_up_form">
           <form onSubmit={sign_submit}>
+            <div className="admin_sign_up_label">Name
+            <br />
             <input
+            className="admin_sign_up_input"
               type="text"
-              placeholder="Enter your Admin name"
               value={Name}
               onChange={changename}
               required
             />
+            </div>
+            <br />
+            <div className="admin_sign_up_label">Admin's Id
+            <br />
             <input
+            className="admin_sign_up_input"
               type="text"
-              placeholder="Enter your Admins ID"
               value={user}
               onChange={changeuser}
               required
             />
+            </div>
+            <br />
+            <div className="admin_sign_up_label">Password
+            <br />
             <input
               type="password"
-              placeholder="Enter your password"
+              className="admin_sign_up_input"
               value={password}
               onChange={changepassword}
               required
             />
-            <div className="sign_up_submit">
-              <button type="submit" className="button">
-                Start Coding today
+            </div>
+            <br />
+            <div className="admin_sign_up_submit">
+              <button type="submit" className="admin_signup_button">
+                Sign Up
               </button>
+              <br />
               {!userlist ? <h3 id="invalid">User Already exists</h3> : ""}
             </div>
           </form>
         </div>
-        <div className="sign_up_login">
+        <div className="admin_sign_up_login">
           <p>
-            Already have an account? <Link to="/admin/login">Log In</Link>
+            Already have an account? <Link to="/admin/login" className="admin_signup_link">Log In</Link>
           </p>
         </div>
       </div>

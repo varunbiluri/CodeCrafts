@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from "./admin_auth";
-
+import Admin_navbar from "./admin_navbar";
+import './admin_login.css'
 const Admin_login = () => {
   const auth = useAuth();
   const navigate = useNavigate();
@@ -38,26 +39,39 @@ const Admin_login = () => {
 
   return (
     <div className='log_in_admin'> 
-    
-      <div className='log_in_content'>
-        <div className='log_in_title'>
-          <h1>Admin's - Login</h1>
+    <Admin_navbar />
+      
+      <div className='log_in_admin_content'>
+        <div className='log_in_admin_title'>
+          <h1>Admin's Login</h1>
         </div>
-        <div className='log_in_decs'>
+        <div className='log_in_admin_decs'>
           <p>Here the panel for only Admin's</p>
         </div>
-        <div className='log_in_form'>
+        <br/>
+        <div className='log_in_admin_form'>
           <form onSubmit={submit}>
-            <input type="text" placeholder='Enter your Admins ID' value={user} onChange={changeuser} required />
-            <input type="password" placeholder='Enter your password' value={password} onChange={changepassword} required />
-            <div className="log_in_submit">
-              <button type="submit" className="button"> Start Coding today </button>
+            <div className='log_in_admin_label'>Admin's Id
+            <br/>
+            <input className="login_admin_input" type="text" value={user} onChange={changeuser} required />
+            </div>
+            <br/>
+            <br/>
+            <div className='log_in_admin_label'>Password
+            <br />
+            <input className="login_admin_input" type="password" value={password} onChange={changepassword} required />
+            </div>
+            <br/>
+            <br/>
+            <div className="log_in_admin_submit">
+
+              <button type="submit" className="admin_button"> Login </button>
               {!userlist ? <h3 id="invalid">Invalid username or password</h3> : ''}
             </div>
           </form>
         </div>
-        <div className="log_in_login">
-          <p>Don't have an account? <Link to='/admin/signup'>Sign up</Link></p>
+        <div className="log_in_admin_login">
+          <p>Don't have an account? <Link to='/admin/signup' className="admin_sign_link">Sign up</Link></p>
         </div>
       </div>
     </div>

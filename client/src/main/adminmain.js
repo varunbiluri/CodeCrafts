@@ -5,7 +5,8 @@ import Admin from '../admin/admin';
 import AdminLogin from '../admin/admin_login'; 
 import AdminSignup from '../admin/admin_signup'; 
 import { AdminProvider } from '../admin/admin_auth';
-import AdminReq from '../admin/admin_req';
+import Addcode from '../admin/addcode';
+// import AdminReq from '../admin/admin_req';
 
 function Adminmain() {
   return (
@@ -13,11 +14,15 @@ function Adminmain() {
       <AdminProvider>
         <Routes>
           <Route path='/' element={
-          <AdminReq>
+          // <AdminReq>
           <Admin />
-          </AdminReq> } />
+          
+          // </AdminReq> 
+        } 
+        />
           <Route path='/login' element={<AdminLogin />} />
           <Route path='/signup' element={<AdminSignup />} />
+          <Route path='/addcode' element={<Addcode />} />
         </Routes>
       </AdminProvider>
       

@@ -1,0 +1,13 @@
+.selection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.run{
+    margin-left: 30rem;
+}
+
+  .celebration {
+    animation: celebrate 1s ease infinite;
+  }
+  
