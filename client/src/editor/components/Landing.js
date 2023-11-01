@@ -60,6 +60,7 @@ const Landing = () => {
   const enterPress = useKeyPress("Enter");
   const ctrlPress = useKeyPress("Control");
   const [isProblemSolved, setIsProblemSolved] = useState(false);
+  const [isProblemNotSolved,setIsProblemNotSolved] = useState(false);
 
 
   const onSelectChange = (sl) => {
@@ -179,6 +180,7 @@ const Landing = () => {
           setShowConfetti(true);
         } else {
           console.log("Coding problem not solved.");
+          setIsProblemNotSolved(true);
         }
 
 
@@ -285,9 +287,14 @@ const Landing = () => {
         </div>
         <div className={`region ${isProblemSolved ? "celebration" : ""}`}>
             <div className="celebration-text">
-              {isProblemSolved
+            {isProblemSolved
                 ? "Congratulations! You have solved the problem."
-                : ""}
+                : ""
+                }
+                {isProblemNotSolved
+                ? "Output is not matching ....!, Keep trying until you find a solution matching to given criteria and output details"
+                : ""
+                }
             </div>
             {showConfetti && <Confetti {...confettiConfig}/>} {/* Render Confetti when problem is solved */}
           </div>
